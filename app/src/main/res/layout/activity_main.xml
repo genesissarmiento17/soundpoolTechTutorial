@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/babychicksbutton"
+        android:id="@+id/babyChicksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="playSound"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <Button
-        android:id="@+id/cartooncomputerbutton"
+        android:id="@+id/cartoonComputerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="playSound"
@@ -30,11 +30,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/babychicksbutton"
+        app:layout_constraintTop_toBottomOf="@+id/babyChicksButton"
         app:layout_constraintVertical_bias="0.068" />
 
     <Button
-        android:id="@+id/laughingbirdsbutton"
+        android:id="@+id/laughingBirdsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="playSound"
@@ -43,11 +43,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartooncomputerbutton"
+        app:layout_constraintTop_toBottomOf="@+id/cartoonComputerButton"
         app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/screaminghawksbutton"
+        android:id="@+id/screamingHawksButton"
         android:layout_width="131dp"
         android:layout_height="58dp"
         android:onClick="playSound"
@@ -56,11 +56,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laughingbirdsbutton"
+        app:layout_constraintTop_toBottomOf="@+id/laughingBirdsButton"
         app:layout_constraintVertical_bias="0.147" />
 
     <Button
-        android:id="@+id/tvstaticbutton"
+        android:id="@+id/tvStaticButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="playSound"
@@ -69,6 +69,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/screaminghawksbutton"
+        app:layout_constraintTop_toBottomOf="@+id/screamingHawksButton"
         app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/fastComputerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="playSound"
+        android:text="Fast Computer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStaticButton"
+        app:layout_constraintVertical_bias="0.294" />
 </androidx.constraintlayout.widget.ConstraintLayout>

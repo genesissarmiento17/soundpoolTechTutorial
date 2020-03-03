@@ -11,8 +11,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     private SoundPool soundpool;
-    private int babychicks, laughingbirds,screaminghawk,cartooncomputer,tvstatic;
-    private int cartooncomputerStreamId;
+    private int babyChicks, laughingBirds, screamingHawk, cartoonComputer, tvStatic;
+    private int cartoonComputerStreamId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,38 +26,42 @@ public class MainActivity extends AppCompatActivity {
                     .build();
 
             soundpool = new SoundPool.Builder()
-                    .setMaxStreams(5)
+                    .setMaxStreams(3)
                     .setAudioAttributes(audioAttributes)
                     .build();
 
         } else {
-            soundpool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+            soundpool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
         }
 
-        babychicks = soundpool.load(this, R.raw.babychicks, 1);
-        cartooncomputer = soundpool.load(this, R.raw.cartooncomputer, 1);
-        laughingbirds = soundpool.load(this, R.raw.laughingbirds, 1);
-        screaminghawk = soundpool.load(this, R.raw.screaminghawk, 1);
-        tvstatic = soundpool.load(this, R.raw.tvstatic, 1);
+        babyChicks = soundpool.load(this, R.raw.babychicks, 1);
+        cartoonComputer = soundpool.load(this, R.raw.cartooncomputer, 1);
+        laughingBirds = soundpool.load(this, R.raw.laughingbirds, 1);
+        screamingHawk = soundpool.load(this, R.raw.screaminghawk, 1);
+        tvStatic = soundpool.load(this, R.raw.tvstatic, 1);
     }
 
     public void playSound(View v){
         switch(v.getId()){
-            case R.id.babychicksbutton:
-                soundpool.play(babychicks, 1,1,0, 0,1);
-                soundpool.pause(cartooncomputerStreamId);
+            case R.id.babyChicksButton:
+                soundpool.play(babyChicks, 1,1,0, 2,1);
+                soundpool.pause(cartoonComputerStreamId);
                 break;
-            case R.id.cartooncomputerbutton:
-                cartooncomputerStreamId = soundpool.play(cartooncomputer, 1,1,0, -1,1);
+            case R.id.cartoonComputerButton:
+                cartoonComputerStreamId = soundpool.play(cartoonComputer, 1,1,0, 0,1);
                 break;
-            case R.id.laughingbirdsbutton:
-                soundpool.play(laughingbirds, 1,1,0, 0,1);
+            case R.id.laughingBirdsButton:
+                soundpool.play(laughingBirds, 1,1,0, 0,1);
                 break;
-            case R.id.screaminghawksbutton:
-                soundpool.play(screaminghawk, 1,1,0, 0,1);
+            case R.id.screamingHawksButton:
+                soundpool.play(screamingHawk, 1,1,1, 0,1);
                 break;
-            case R.id.tvstaticbutton:
-                soundpool.play(tvstatic, 1,1,0, 0,1);
+            case R.id.tvStaticButton:
+                soundpool.play(tvStatic, 1,1,0, 0,1);
+                break;
+
+            case R.id.fastComputerButton:
+                soundpool.play(cartoonComputer, 1,1,0,0,2);
                 break;
         }
     }
